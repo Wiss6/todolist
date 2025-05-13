@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  padding: 0;
+   overflow-x: hidden;/* Empêche le débordement horizontal */
+}
+.nav-overlay {
+  position: fixed; /* Fixe la navbar en haut */
+  top: 0;
+  left: 0;
+  width: 100%; /* Prend toute la largeur */
+  z-index: 10; /* Assure que la navbar est au-dessus des autres éléments */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: transparent; /* Pas de couleur de fond */
+  color: white; /* Texte blanc pour la lisibilité */
+  
+  transition: background 0.3s ease;
+}
+.nav-overlay .container {
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur du contenu interne */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.nav-overlay.scrolled {
+  background: rgba(30, 64, 175, 0.8); /* Fond bleu transparent */
+}
+ 
+nav img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.nav-left, .nav-center {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-center a {
+  color: white;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-center a:hover {
+  background-color: white;
+  color: #1e40af;
+  transform: scale(1.05);
+}
+
+.nav-right img.fac-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0; /* AUCUN ARRONDI POUR LE LOGO DE LA FACULTÉ */
+  margin: 0; /* Supprimez tout margin */
+  padding: 0; /* Supprimez tout padding */
+}
+.nav-right {
+  margin-right: 5px; /* Ajoutez un petit espace pour éviter que le logo touche le bord */
+}
+
+
+.logo{ 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.4rem;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-weight: bold;}
+
+
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+.home-content-wrapper {
+  display: flex;
+  flex-direction: column; /* Organise les éléments verticalement */
+  align-items: center; /* Centre le robot et le texte horizontalement */
+  justify-content: center; /* Centre le contenu verticalement */
+  position: relative;
+  z-index: 3; /* Assure que le contenu est au-dessus de la vidéo */
+  padding: 20px;
+  padding-top: 100px;
+  gap: 5px; 
+}
+
+.robot-animation {
+  width: 300px; /* Ajustez la taille de l'animation */
+  height: auto;
+  margin-bottom:-100px; /* Réduisez l'espace sous le robot */
+  margin-top: 0;}
+
+
+
+.home-content {
+  text-align: center; /* Centre le texte */
+  color: white; /* Assure que le texte est lisible sur la vidéo */
+  margin-top: 0;
+}
+
+.home-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  background-color: white;
+  color: #1e40af;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+  color: white;
+  transform: scale(1.05);
+}
+/* Modale - Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100; /* Au-dessus de tout */
+}
+
+/* Modale - Contenu */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button[type="submit"] {
+  background-color: #1e40af;
+  color: white;
+}
+
+.modal button[type="button"] {
+  background-color: #ccc;
+  color: black;
+}
+
+.modal button:hover {
+  opacity: 0.9;
+}
+.modal-info {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.modal-info p {
+  margin: 5px 0;
+}
+
+.modal-info strong {
+  color: #1e40af; /* Couleur bleue pour les titres */
+}
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px; /* Espacement entre les liens */
+}
+
+.social-links a {
+  color: #1e40af; /* Couleur bleue pour les liens */
+  text-decoration: none; /* Supprime le soulignement */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0d2c6c; /* Couleur plus foncée au survol */
+}
+.modal-info {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre l'icône et le texte */
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  color: #1e40af; /* Couleur bleue pour les icônes */
+  font-size: 1.2rem; /* Taille des icônes */
+}
+
+.info-item a {
+  color: #1e40af; /* Couleur bleue pour les liens */
+  text-decoration: none; /* Supprime le soulignement */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+  color: #0d2c6c; /* Couleur plus foncée au survol */
+}

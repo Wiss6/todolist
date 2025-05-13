@@ -1,0 +1,107 @@
+
+ /* Vidéo de fond */
+.bg-video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} /* Assure que la vidéo reste derrière la navbar */
+
+/* Overlay sombre pour lisibilité */
+.evenements-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Conteneur global */
+.evenements-container {
+  position: relative;
+  z-index: 1;
+  padding: 50px 20px;
+  padding-top: 80px; /* Ajustez en fonction de la hauteur de la navbar */
+  color: white;
+  text-align: center;
+}
+
+/* Titre principal */
+
+.evenements-titre {
+  font-size: 2.3rem; /* Taille du texte */
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-shadow: 3px 2px 5px rgb(61, 213, 233), -3px -2px 5px rgb(71, 45, 187) ;
+  background-color: rgba(255, 255, 255, 0.2); /* Fond blanc légèrement transparent */
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  
+}
+
+/* Liste des événements */
+.evenements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espacement entre les événements */
+  width: 100%;
+}
+
+/* Conteneur pour chaque événement */
+.evenement-item {
+  display: flex;
+  flex-direction: column; /* Aligne l'image et la carte verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  gap: 20px; /* Espacement entre l'image et la carte */
+}
+
+/* Image de l'événement */
+.evenement-image {
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 1000px; /* Limite la largeur maximale de l'image */
+  height: auto; /* Conserve la hauteur proportionnelle */
+  max-height: 400px; /* Limite la hauteur maximale de l'image */
+  object-fit: cover; /* Ajuste l'image pour qu'elle reste proportionnelle */
+  border-radius: 12px; /* Bordures arrondies */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image */
+  margin: 0 auto; /* Centre l'image horizontalement */
+}
+/* Carte pour la description */
+.evenement-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+  color: #111;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  text-align: center;
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 1000px; /* Limite la largeur maximale de la carte */
+  margin: 0 auto; /* Centre la carte horizontalement */
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.evenement-card:hover {
+  transform: scale(1.02); /* Effet de zoom au survol */
+}
+
+.evenement-card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.5rem;
+}
+
+.evenement-card p {
+  color: #333;
+  font-size: 1.3rem;
+}

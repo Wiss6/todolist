@@ -1,0 +1,73 @@
+/* src/pages/Members.css */
+.members-container {
+  padding: 40px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.bg-video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}/* Assure que la vidéo reste derrière la navbar */
+
+.member-card {
+  background-color: rgba(255, 255, 255, 0.9); /* fond blanc légèrement transparent */
+  border-radius: 20px; /* ✅ coins arrondis */
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ombre douce */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: scale(1.05); /* zoom léger au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.member-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 100px; /* ✅ image aussi arrondie */
+}
+
+.member-card h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #1e40af;
+}
+
+.member-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.members-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2.3rem;
+  font-family: sans-serif;
+  text-shadow: 3px 2px 5px rgb(61, 213, 233), -3px -2px 5px rgb(71, 45, 187) ;
+  background-color: rgba(255, 255, 255, 0.2); /* Fond blanc légèrement transparent */
+  color: whitesmoke;
+
+  
+}
+
+
+
+
+
+
